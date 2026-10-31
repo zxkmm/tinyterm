@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in tinyterm doesn't work as it should
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: tinyterm version
+      description: ℹ in the tab bar → About
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [macOS, Windows, Linux, Other]
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version and architecture
+      placeholder: "macOS 15.4 arm64 / Windows 11 x64 / Ubuntu 24.04 x86_64 (Wayland)"
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection kind
+      multiple: true
+      options: [SSH, Serial, Local shell, Not connection-specific]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a serial session on /dev/ttyUSB0 at 115200 8N1
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: >
+        Serial adapter or device, SSH server, screenshots, logs. Remove passwords,
+        keys and host names you don't want public.

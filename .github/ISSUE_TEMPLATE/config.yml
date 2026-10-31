@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Website
+    url: https://tinyterm.zxkmm.com
+    about: Downloads and an overview of tinyterm
+  - name: Business contact
+    url: mailto:contact@zxkmm.com
+    about: For licensing or commercial questions
